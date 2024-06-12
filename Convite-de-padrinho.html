@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Padrinho</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #nao {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você aceita ser nosso padrinho?</h1>
+    <button id="sim" onclick="aceitar()">Sim</button>
+    <button id="nao" onmouseover="moverBotao()">Não</button>
+
+    <script>
+        function aceitar() {
+            alert("Obrigado por aceitar ser nosso padrinho!");
+        }
+
+        function moverBotao() {
+            var button = document.getElementById('nao');
+            var x = Math.random() * (window.innerWidth - button.clientWidth);
+            var y = Math.random() * (window.innerHeight - button.clientHeight);
+            button.style.left = x + 'px';
+            button.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
